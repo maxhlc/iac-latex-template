@@ -1,0 +1,83 @@
+\documentclass[10pt, letterpaper, twocolumn]{article}
+
+\usepackage{style}
+
+% Copyright header
+\newcommand{\iaccopyright}{
+n\textsuperscript{th} International Astronautical Congress (IAC), Location, Dates.
+
+Copyright ©2022 by Institution. Published by the IAF, with permission and released to the IAF to publish in all forms.
+}
+
+% Session code
+\newcommand{\iacsession}{IAC-Year-Session}
+
+% Title
+\newcommand{\iactitle}{Example Title}
+
+% Authors
+\newcommand{\iacauthors}{Aaron A. Aaronson\textsuperscript{a}*, John Smith\textsuperscript{b}}
+
+% Institutions
+\newcommand{\iacinstitutions}{
+\noindent \textsuperscript{a} \textit{Example Institution, Example Address, \email{aaaaronson@example.com}}
+    
+\noindent \textsuperscript{b} \textit{Example Institution, Example Address, \email{jsmith@example.com}}
+}
+
+\begin{document}
+
+\twocolumn[{%
+    \begin{@twocolumnfalse}
+        % Add title block
+        \maketitle
+
+        % Add abstract
+        \begin{abstract}
+        \lipsum[1-3]
+        \end{abstract}
+
+        % Add keywords
+        \noindent\textbf{Keywords:} Example keyword
+        
+        \vspace{\baselineskip}
+    \end{@twocolumnfalse}
+}]
+
+% Reset acronyms
+\acresetall
+
+% Nomenclature entries
+\setlength\nomlabelwidth{1cm}
+\nomenclature{$a$}{Example nomenclature entry}
+{\raggedright\printnomenclature}
+
+% Print acronyms
+\section*{Acronyms/Abbreviations}
+\printacronyms[name={Acronyms/Abbreviations}, heading=none]
+
+\section{Introduction}\label{s:introduction}
+\lipsum[1-3]
+
+\section{Background}\label{s:background}
+\lipsum[1-3]
+
+\section{Methodology}\label{s:Methodology}
+\lipsum[1-3]
+
+\section{Results and Discussion}\label{s:results}
+\lipsum[1-3]
+
+\section{Future Work}\label{s:future_work}
+\lipsum[1-3]
+
+\section{Conclusions}\label{s:conclusions}
+\lipsum[1-3]
+
+\newpage
+\section*{Acknowledgements}
+
+\section*{References}
+\printbibliography[heading=none]
+
+\end{document}
